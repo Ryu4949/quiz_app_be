@@ -6,7 +6,7 @@ from .serializers import QuizSerializer
 import random
 
 # Create your views here.
-@api_view['GET']
+@api_view(['GET'])
 def randomQuiz(request, id):
     totalQuizzes = Quiz.objects.all()
     randomQuizzes = random.sample(list(totalQuizzes), id)
